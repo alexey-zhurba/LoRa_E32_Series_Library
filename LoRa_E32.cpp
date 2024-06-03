@@ -737,7 +737,7 @@ ResponseStructContainer LoRa_E32::receiveMessage(const uint8_t size){
 
 	rc.data = malloc(size);
 	rc.status.code = this->receiveStruct((uint8_t *)rc.data, size);
-	this->cleanUARTBuffer();
+	//this->cleanUARTBuffer();
 	if (rc.status.code!=E32_SUCCESS) {
 		return rc;
 	}
